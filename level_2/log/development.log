@@ -119,3 +119,218 @@ Started GET "/users/sign_up" for ::1 at 2024-06-19 17:25:10 +0200
   
 ActionController::RoutingError (No route matches [GET] "/users/sign_up"):
   
+Started GET "/users/sign_up" for ::1 at 2024-06-19 17:28:01 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_up"):
+  
+Started GET "/users/sign_up" for ::1 at 2024-06-19 17:28:03 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_up"):
+  
+Started GET "/users/sign_up" for ::1 at 2024-06-19 17:28:32 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 260)
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 625)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 20.4ms | Allocations: 5045)
+  Rendered layout layouts/application.html.erb (Duration: 322.6ms | Allocations: 84518)
+Completed 200 OK in 374ms (Views: 338.6ms | ActiveRecord: 14.7ms | Allocations: 97201)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-06-19 17:32:36 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 209)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 8273)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 8371)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 9980)
+
+
+  
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x00007f8748106b08 @nested_child_index={}, @options={:allow_method_names_outside_object=>false, :skip_default_ids=>false, :as=>:user, :html=>{:class=>"new_user", :id=>"new_user"}, :method=>:post, :local=>true}, @template=#<ActionView::Base:0x0000000000bf18>, @object=#<User id: nil, email: "", created_at: nil, updated_at: nil, first_name: nil, last_name: nil>, @object_name=:user, @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>false}, @default_html_options={}, @multipart=nil, @index=nil>
+
+    '.freeze;@output_buffer.append=( f.input :first_name, autocomplete: "first-name" );@output_buffer.safe_append='
+                                      ^^^^^^):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :fist_name %><br />
+    26:     <%= f.input :first_name, autocomplete: "first-name" %>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/devise/registrations/new.html.erb:26
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2024-06-19 17:33:21 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2757)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2842)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 4403)
+
+
+  
+ActionView::Template::Error ():
+    22:   </div>
+    23: 
+    24:   <div class="field">
+    25:     <%= raise %>
+    26:     <%= f.label :fist_name %><br />
+    27:     <%= f.input :first_name, autocomplete: "first-name" %>
+    28:   </div>
+  
+app/views/devise/registrations/new.html.erb:25
+app/views/devise/registrations/new.html.erb:3
+Started PUT "/__web_console/repl_sessions/51c2b3ae462d81b5eb28783f3d249f81" for ::1 at 2024-06-19 17:33:24 +0200
+Started GET "/users/sign_up" for ::1 at 2024-06-19 17:34:18 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 209)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 4377)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4463)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 6039)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for #<ActionView::Helpers::FormBuilder:0x00007f8748709f28 @nested_child_index={}, @options={:allow_method_names_outside_object=>false, :skip_default_ids=>false, :as=>:user, :html=>{:class=>"new_user", :id=>"new_user"}, :method=>:post, :local=>true}, @template=#<ActionView::Base:0x0000000000c620>, @object=#<User id: nil, email: "", created_at: nil, updated_at: nil, first_name: nil, last_name: nil>, @object_name=:user, @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>false}, @default_html_options={}, @multipart=nil, @index=nil>
+
+    '.freeze;@output_buffer.append=( f.first_name :first_name, autocomplete: "first-name" );@output_buffer.safe_append='
+                                      ^^^^^^^^^^^
+Did you mean?  field_name):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :fist_name %><br />
+    26:     <%= f.first_name :first_name, autocomplete: "first-name" %>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/devise/registrations/new.html.erb:26
+app/views/devise/registrations/new.html.erb:3
+Started PUT "/__web_console/repl_sessions/c8a267387c6fc483ce3884b4ae708d08" for ::1 at 2024-06-19 17:34:25 +0200
+Started PUT "/__web_console/repl_sessions/c8a267387c6fc483ce3884b4ae708d08" for ::1 at 2024-06-19 17:34:29 +0200
+Started PUT "/__web_console/repl_sessions/c8a267387c6fc483ce3884b4ae708d08" for ::1 at 2024-06-19 17:34:30 +0200
+Started PUT "/__web_console/repl_sessions/c8a267387c6fc483ce3884b4ae708d08" for ::1 at 2024-06-19 17:34:34 +0200
+Started PUT "/__web_console/repl_sessions/c8a267387c6fc483ce3884b4ae708d08" for ::1 at 2024-06-19 17:34:59 +0200
+Started PUT "/__web_console/repl_sessions/c8a267387c6fc483ce3884b4ae708d08" for ::1 at 2024-06-19 17:35:31 +0200
+Started PUT "/__web_console/repl_sessions/c8a267387c6fc483ce3884b4ae708d08" for ::1 at 2024-06-19 17:35:47 +0200
+Started PUT "/__web_console/repl_sessions/c8a267387c6fc483ce3884b4ae708d08" for ::1 at 2024-06-19 17:35:48 +0200
+Started PUT "/__web_console/repl_sessions/c8a267387c6fc483ce3884b4ae708d08" for ::1 at 2024-06-19 17:35:53 +0200
+Started GET "/users/sign_up" for ::1 at 2024-06-19 17:36:54 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.8ms | Allocations: 209)
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 488)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3061)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4766)
+Completed 200 OK in 21ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 6364)
+
+
+Started POST "/users" for ::1 at 2024-06-19 17:37:23 +0200
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Thibaut", "last_name"=>"roland"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :first_name, :last_name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f8741868880>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Thibaut", "last_name"=>"roland"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (6.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 934)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3433)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4870)
+Completed 422 Unprocessable Entity in 332ms (Views: 7.2ms | ActiveRecord: 34.1ms | Allocations: 18330)
+
+
+Started POST "/users" for ::1 at 2024-06-19 17:37:57 +0200
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Thibaut", "last_name"=>"Roland"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :first_name, :last_name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f87487308d0>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Thibaut", "last_name"=>"Roland"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 747)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 3150)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 4473)
+Completed 422 Unprocessable Entity in 223ms (Views: 5.0ms | ActiveRecord: 3.8ms | Allocations: 10931)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-06-19 17:40:55 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.8ms | Allocations: 260)
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 625)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 5180)
+  Rendered layout layouts/application.html.erb (Duration: 87.7ms | Allocations: 38018)
+Completed 200 OK in 149ms (Views: 100.5ms | ActiveRecord: 13.2ms | Allocations: 50352)
+
+
+Started POST "/users" for ::1 at 2024-06-19 17:41:09 +0200
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Thibaut", "last_name"=>"roland"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :first_name, :last_name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fead1f40c40>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Thibaut", "last_name"=>"roland"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 917)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 3674)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 5116)
+Completed 422 Unprocessable Entity in 238ms (Views: 4.8ms | ActiveRecord: 4.0ms | Allocations: 15407)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-06-19 17:49:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 260)
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 625)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 5180)
+  Rendered layout layouts/application.html.erb (Duration: 78.5ms | Allocations: 37890)
+Completed 200 OK in 127ms (Views: 94.6ms | ActiveRecord: 9.3ms | Allocations: 50422)
+
+
+Started POST "/users" for ::1 at 2024-06-19 17:50:02 +0200
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"Thibaut", "last_name"=>"Roland"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (10.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "first_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "example@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-06-19 15:50:02.493929"], ["updated_at", "2024-06-19 15:50:02.493929"], ["first_name", "Thibaut"], ["last_name", "Roland"]]
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 244ms (ActiveRecord: 20.7ms | Allocations: 12190)
+
+
+Started GET "/" for ::1 at 2024-06-19 17:50:02 +0200
+Processing by Rails::WelcomeController#index as TURBO_STREAM
+  Rendering /home/thibautrld/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/thibautrld/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.9ms | Allocations: 302)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1236)
+
+
+Started GET "/" for ::1 at 2024-06-19 17:50:02 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/thibautrld/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/thibautrld/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 295)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1067)
+
+
