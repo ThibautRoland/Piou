@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+TAGS = %w[urgent secret rigolo].freeze
+
+puts 'destroying all tags...'
+Tag.destroy_all
+
+TAGS.each do |tag|
+  Tag.create(tag:)
+end
+
+puts 'tags created!'
