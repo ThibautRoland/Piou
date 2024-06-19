@@ -67,3 +67,10 @@ puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.8) lib/puma/server.rb:443:in `process_client'
 puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-06-19 16:55:55 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/thibautrld/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/thibautrld/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.2ms | Allocations: 529)
+Completed 200 OK in 18ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 4937)
+
+

@@ -1,0 +1,30 @@
+version: '3'
+services:
+  database:
+    image: postgres:10.16
+    environment:
+      POSTGRES_USER: thibaut
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: piou_app_development
+    volumes:
+      - pgsql-volume-container:/var/lib/postgresql/data
+    ports:
+      - 5454:5432
+    networks:
+      - piou-network
+
+  adminer:
+    image: adminer:latest
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+    ports:
+      - 8080:8080
+    networks:
+      - piou-network
+
+networks:
+  piou-network:
+
+
+volumes:
+  pgsql-volume-container:
