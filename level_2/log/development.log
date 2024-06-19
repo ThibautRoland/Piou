@@ -909,3 +909,49 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 83ms (Views: 22.0ms | ActiveRecord: 49.9ms | Allocations: 25030)
 
 
+Started GET "/messages" for ::1 at 2024-06-19 19:12:14 +0200
+Processing by MessagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (1.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/messages/index.html.erb:3
+  Rendered messages/index.html.erb within layouts/application (Duration: 102.2ms | Allocations: 6208)
+  Rendered layout layouts/application.html.erb (Duration: 168.5ms | Allocations: 22197)
+Completed 200 OK in 192ms (Views: 146.4ms | ActiveRecord: 23.8ms | Allocations: 25420)
+
+
+Started GET "/messages/1" for ::1 at 2024-06-19 19:12:17 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMessage Load (2.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:15:in `set_message'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 154)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 2038)
+Completed 200 OK in 62ms (Views: 15.7ms | ActiveRecord: 3.6ms | Allocations: 4966)
+
+
+Started GET "/messages" for ::1 at 2024-06-19 19:23:52 +0200
+Processing by MessagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/messages/index.html.erb:3
+  Rendered messages/index.html.erb within layouts/application (Duration: 58.9ms | Allocations: 6103)
+  Rendered layout layouts/application.html.erb (Duration: 126.1ms | Allocations: 21992)
+Completed 200 OK in 151ms (Views: 111.4ms | ActiveRecord: 16.7ms | Allocations: 25211)
+
+
+Started GET "/messages/1" for ::1 at 2024-06-19 19:23:55 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMessage Load (2.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:20:in `set_message'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 1849)
+Completed 200 OK in 15ms (Views: 6.1ms | ActiveRecord: 3.2ms | Allocations: 3484)
+
+
