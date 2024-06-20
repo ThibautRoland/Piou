@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :messages, only: %i[index show new create]
+  resources :messages, only: %i[index show create]
+
 end
