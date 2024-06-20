@@ -1,3 +1,22 @@
-<p> <%= @message.content %> </p>
+<div class="p-4 m-3">
+  <%= link_to "↩ return", messages_path %>
+</div>
 
-<p> <%= @translation %> </p>
+<div class="flex flex-row">
+  <div class="basis-1/4"></div>
+  <div class="basis-1/2">
+    <div class="bg-slate-300 shadow-md rounded-lg p-4">
+      <h2 class="text-xl text-center"> <%= @message.tag.tag %> </h1>
+      <div class="m-3 p-3">
+        <p class="mb-3 text-lg">🧙‍♂️ <%= @message.content %> </p>
+        <p class="text-lg">🐦 <%= @translation %> </p>
+      </div>
+      <div class="flex justify-end">
+        <div class="text-lg me-5">
+          <p>from <%= @message.user.first_name %> <%= @message.user.last_name %> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="basis-1/4"></div>
+</div>
