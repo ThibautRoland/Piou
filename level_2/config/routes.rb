@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :messages, only: %i[index show create]
 
+  get '/tags/:name/messages', to: 'messages#messages_by_tag', as: :tag_messages
 end

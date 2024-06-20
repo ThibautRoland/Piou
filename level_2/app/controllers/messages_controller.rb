@@ -30,6 +30,12 @@ class MessagesController < ApplicationController
     end
   end
 
+  def messages_by_tag
+    @tag_name = params[:name]
+    tag = Tag.find_by(tag: @tag_name)
+    @messages = tag ? Message.where(tag:) : nil
+  end
+
   private
 
   def set_message

@@ -1,0 +1,25 @@
+<div class="p-4 m-3">
+  <%= link_to "↩ return", messages_path %>
+</div>
+<% if @messages %>
+  <h2 class="text-2xl text-center mb-4">All <%= @tag_name %> messages</h2>
+  <div class="flex flex-row">
+    <div class="basis-1/12"></div>
+    <div class="basis-10/12">
+      <div class="grid grid-cols-3 gap-5">
+        <% @messages.each do |message| %>
+          <%= link_to message_path(message) do %>
+            <div class="bg-slate-300 shadow-md hover:shadow-lg rounded p-4">
+              <p> <%= message.user.first_name %> <%= message.user.last_name %> </p>
+              <p> <%= message.content %> </p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="basis-1/12"></div>
+  </div>
+<% end %>
+<% if !@messages %>
+  <h2 class="text-2xl text-center mb-4">There are no <%= @tag_name %> messages 🙄</h2>
+<% end %>
