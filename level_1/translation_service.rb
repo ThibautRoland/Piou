@@ -33,47 +33,45 @@ MAP_TO_PIOU = {
 
 MAP_TO_HUMAN_LANGUAGE = MAP_TO_PIOU.invert
 
-UNKNOWN_CHARACTER = '#'
+UNKNOWN_CHARACTER = '#'.freeze
 
-def translate(way, string)
-  # p MAP_TO_PIOU
-  # p MAP_TO_HUMAN_LANGUAGE
-  return mapping_to_piou(string.upcase) if way == 'to_piou'
-  return mapping_to_human(string.downcase) if way == 'to_human'
+module Translation
 
-  puts "wrong argument given to translate method for the way parameter, given argument -> #{way}"
-end
+  def translate(way, string)
+    # p MAP_TO_PIOU
+    # p MAP_TO_HUMAN_LANGUAGE
+    return mapping_to_piou(string.upcase) if way == 'to_piou'
+    return mapping_to_human(string.downcase) if way == 'to_human'
 
-private
-
-def mapping_to_piou(string)
-  puts "mapping to piou..."
-  message_array = []
-  array_of_words = string.split(' ')
-  array_of_words.each do |word|
-    message_as_array = word.chars.map do |letter|
-      MAP_TO_PIOU.keys.include?(letter) ? MAP_TO_PIOU[letter] : UNKNOWN_CHARACTER
-    end
-    message_array << message_as_array.join(' ')
+    puts "wrong argument given to translate method for the way parameter, given argument -> #{way}"
   end
-  message_array.join('  ')
-  # array_of_words.map do
-end
 
-def mapping_to_human(string)
-  puts 'mapping to human...'
-  message_array = []
-  array_of_words = string.split('  ')
-  array_of_words.each do |word|
-    word_as_array = word.split(' ')
-    mapped_word_as_array = word_as_array.map do |piou|
-      MAP_TO_HUMAN_LANGUAGE.has_key?(piou) ? MAP_TO_HUMAN_LANGUAGE[piou].downcase : UNKNOWN_CHARACTER
+  private
+
+  def mapping_to_piou(string)
+    puts "mapping to piou..."
+    message_array = []
+    array_of_words = string.split(' ')
+    array_of_words.each do |word|
+      message_as_array = word.chars.map do |letter|
+        MAP_TO_PIOU.keys.include?(letter) ? MAP_TO_PIOU[letter] : UNKNOWN_CHARACTER
+      end
+      message_array << message_as_array.join(' ')
     end
-    message_array << mapped_word_as_array.join
+    message_array.join('  ')
   end
-  message_array.join(' ')
-end
 
-puts translate('to_human', 'poup uiui piop poup uiui piop iupo  ipip ioui  ipou uiui piop iiou iupi piou ppou piuu  iiou ioui ipou ioui piui ppou iupi  piou piuu piup iupi piou piop piui piou piop piup ioui iipu  poup uiui piiu piiu ioui piui piup  pipp piou ppou iupi ioui  ppip')
-puts translate('to_piou', 'Hello, comment allez vous ?')
-puts translate('to_human', 'poui ioui pouu pouu uiui iupo  poup uiui piiu piiu ioui piui piup  piou pouu pouu ioui iupp  ipou uiui piop piuu  ppip')
+  def mapping_to_human(string)
+    puts 'mapping to human...'
+    message_array = []
+    array_of_words = string.split('  ')
+    array_of_words.each do |word|
+      word_as_array = word.split(' ')
+      mapped_word_as_array = word_as_array.map do |piou|
+        MAP_TO_HUMAN_LANGUAGE.has_key?(piou) ? MAP_TO_HUMAN_LANGUAGE[piou].downcase : UNKNOWN_CHARACTER
+      end
+      message_array << mapped_word_as_array.join
+    end
+    message_array.join(' ')
+  end
+end
