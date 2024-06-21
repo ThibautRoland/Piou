@@ -19261,3 +19261,122 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 661ms (Views: 635.1ms | ActiveRecord: 12.1ms | Allocations: 58137)
 
 
+Started DELETE "/users/sign_out" for ::1 at 2024-06-21 15:03:36 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 487ms (ActiveRecord: 136.6ms | Allocations: 6649)
+
+
+Started GET "/" for ::1 at 2024-06-21 15:03:43 +0200
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 8.5ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 196.7ms | Allocations: 26873)
+Completed 200 OK in 238ms (Views: 210.3ms | ActiveRecord: 0.0ms | Allocations: 28647)
+
+
+Started GET "/" for ::1 at 2024-06-21 15:04:52 +0200
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.7ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 104.4ms | Allocations: 7533)
+Completed 200 OK in 145ms (Views: 125.4ms | ActiveRecord: 0.0ms | Allocations: 9110)
+
+
+Started GET "/" for ::1 at 2024-06-21 15:10:57 +0200
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 42.6ms | Allocations: 1189)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 1279)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 0.0ms | Allocations: 2841)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div>
+  <h1 class="font-bold text-5xl text-center m-5 p-5">Welcome to the Piou App!</h1>
+
+  <div class="flex flex-row">
+    <div class="basis-1/3"></div>
+    <div class="basis-1/3">
+      <%= link_to new_user_session_path, do %>
+        <div class="bg-slate-300 p-5 m-3 shadow-md rounded-lg">
+          Sign in
+        </div>
+      <% end %>
+    </div>
+    <div class="basis-1/3"></div>
+  </div>
+</div>
+
+):
+1:    <div>
+2:      <h1 class="font-bold text-5xl text-center m-5 p-5">Welcome to the Piou App!</h1>
+3:    
+4:      <div class="flex flex-row">
+5:        <div class="basis-1/3"></div>
+6:        <div class="basis-1/3">
+7:          <%= link_to new_user_session_path, do %>
+8:            <div class="bg-slate-300 p-5 m-3 shadow-md rounded-lg">
+9:              Sign in
+10:            </div>
+11:          <% end %>
+12:        </div>
+13:        <div class="basis-1/3"></div>
+14:      </div>
+15:    </div>
+  
+app/views/pages/home.html.erb:7: syntax error, unexpected `do' for block
+app/views/pages/home.html.erb:18: syntax error, unexpected `end', expecting end-of-input
+app/views/pages/home.html.erb:7: syntax error, unexpected `do' for block
+app/views/pages/home.html.erb:18: syntax error, unexpected `end', expecting end-of-input
+app/views/pages/home.html.erb:7: syntax error, unexpected `do' for block
+app/views/pages/home.html.erb:18: syntax error, unexpected `end', expecting end-of-input
+app/views/pages/home.html.erb:7: syntax error, unexpected `do' for block
+app/views/pages/home.html.erb:18: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for ::1 at 2024-06-21 15:11:29 +0200
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 95.3ms | Allocations: 6461)
+Completed 200 OK in 101ms (Views: 97.7ms | ActiveRecord: 0.0ms | Allocations: 8037)
+
+
+Started GET "/" for ::1 at 2024-06-21 15:11:51 +0200
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 17.1ms | Allocations: 291)
+  Rendered layout layouts/application.html.erb (Duration: 47.8ms | Allocations: 6273)
+Completed 200 OK in 64ms (Views: 60.5ms | ActiveRecord: 0.0ms | Allocations: 7855)
+
+
+Started GET "/" for ::1 at 2024-06-21 15:13:36 +0200
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.9ms | Allocations: 444)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 6426)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 0.0ms | Allocations: 7989)
+
+
+Started GET "/messages" for ::1 at 2024-06-21 15:13:39 +0200
+Processing by MessagesController#index as HTML
+Completed 401 Unauthorized in 36ms (ActiveRecord: 0.0ms | Allocations: 736)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-06-21 15:13:39 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 11.9ms | Allocations: 560)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 44.0ms | Allocations: 2244)
+  Rendered layout layouts/application.html.erb (Duration: 58.6ms | Allocations: 7985)
+Completed 200 OK in 106ms (Views: 64.6ms | ActiveRecord: 0.0ms | Allocations: 9463)
+
+
