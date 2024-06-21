@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
   include Translation
 
   before_action :set_message, only: :show
+  before_action :authenticate_user!
 
   def index
     @messages = Message.all
