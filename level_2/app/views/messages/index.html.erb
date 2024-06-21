@@ -1,5 +1,19 @@
 <h1 class="text-3xl font-bold text-center my-4 py-4">🧙‍♂️ Piou App Messages 🐦</h1>
 
+<div class="flex flex-row">
+  <div class="basis-1/6"></div>
+  <div class="basis-4/6">
+    <div class="flex justify-between text-md font-medium text-center text-gray-500 border-b-2 border-slate-400 px-5 pt-5">
+      <% @tags.each do |tag| %>
+        <div class="mx-1 bg-slate-300 rounded-t-xl p-4 hover:bg-slate-400/50 shadow-md">
+          <%= link_to "#{tag.tag} messages", tag_messages_path(tag.tag) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="basis-1/6"></div>
+</div>
+
 <div class="flex flex-row p-4">
   <div class="basis-2/3 p-4">
     <% @messages.each do |message| %>
