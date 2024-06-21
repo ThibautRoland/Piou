@@ -1,4 +1,4 @@
-require_relative '../../../level_1/translation_service'
+require_relative '../../../level_1/traduction.rb'
 
 class MessagesController < ApplicationController
 
@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
   end
 
   def show
-    @translation = translate('to_piou', @message.content)
+    @translation = Translation.encode(@message.content)
   end
 
   def create
