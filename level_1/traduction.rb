@@ -37,17 +37,6 @@ UNKNOWN_CHARACTER = '#'.freeze
 
 module Translation
 
-  # def translate(way, string)
-  #   # p MAP_TO_PIOU
-  #   # p MAP_TO_HUMAN_LANGUAGE
-  #   return mapping_to_piou(string.upcase) if way == 'to_piou'
-  #   return mapping_to_human(string.downcase) if way == 'to_human'
-
-  #   puts "wrong argument given to translate method for the way parameter, given argument -> #{way}"
-  # end
-
-  # private
-
   def self.encode(string)
     puts "mapping to piou..."
     message_array = []

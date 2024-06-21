@@ -1,4 +1,4 @@
-require_relative '../../../level_1/traduction.rb'
+require_relative '../../../level_1/traduction'
 
 class MessagesController < ApplicationController
 
