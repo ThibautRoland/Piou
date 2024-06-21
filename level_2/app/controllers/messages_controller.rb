@@ -35,6 +35,11 @@ class MessagesController < ApplicationController
     @tag_name = params[:name]
     tag = Tag.find_by(tag: @tag_name)
     @messages = tag ? Message.where(tag:) : nil
+    @emoji = ''
+    @emoji = '🔑' if @tag_name == 'secret'
+    @emoji = '🤣' if @tag_name == 'rigolo'
+    @emoji = '⚠' if @tag_name == 'urgent'
+
   end
 
   private
