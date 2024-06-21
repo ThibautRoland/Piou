@@ -171,6 +171,8 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
+    rails-ujs (0.1.0)
+      railties (>= 3.1)
     railties (7.0.8.4)
       actionpack (= 7.0.8.4)
       activesupport (= 7.0.8.4)
@@ -214,6 +216,9 @@ GEM
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
+    turbolinks (5.2.1)
+      turbolinks-source (~> 5.2)
+    turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     warden (1.2.9)
@@ -245,11 +250,13 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.8, >= 7.0.8.4)
+  rails-ujs
   selenium-webdriver
   sprockets-rails
   stimulus-rails
   tailwindcss-rails (~> 2.6)
   turbo-rails
+  turbolinks (~> 5)
   tzinfo-data
   web-console
 
